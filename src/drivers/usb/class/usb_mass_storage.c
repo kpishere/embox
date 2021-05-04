@@ -125,7 +125,6 @@ static int usb_mass_start(struct usb_interface *dev) {
 			}
 		}
 	}
-
 	ret = usb_endp_control_wait(&dev->usb_dev->endp0,
 			USB_DIR_OUT | USB_REQ_TYPE_CLASS | USB_REQ_RECIP_IFACE,
 			USB_REQ_MASS_RESET, 0,

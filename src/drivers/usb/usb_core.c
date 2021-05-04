@@ -27,7 +27,7 @@ EMBOX_UNIT_INIT(usb_core_init);
 static DLIST_DEFINE(usb_hcds_list);
 
 POOL_DEF(usb_hcds, struct usb_hcd, USB_MAX_HCD);
-POOL_DEF(usb_requests, struct usb_request, USB_MAX_REQ);
+POOL_DEF_ATTR(usb_requests, struct usb_request, USB_MAX_REQ, __attribute__((aligned(1024))));
 
 static struct usb_request *usb_request_alloc(struct usb_endp *endp) {
 	struct usb_request *req;
