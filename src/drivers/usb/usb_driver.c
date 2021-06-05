@@ -81,7 +81,7 @@ static int usb_driver_match_table(struct usb_interface *dev,
 			return 1;
 		}
 	}
-	
+
 	while (id->dev_class != 0 || id->vid != 0 || id->pid != 0) {
 		if ((id->vid == dev->usb_dev->dev_desc.id_vendor &&
 				id->pid == dev->usb_dev->dev_desc.id_product) ||
